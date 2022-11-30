@@ -12,31 +12,34 @@ def calc_mark(level):
     # Use a switch case to display the middle percentage for each level
     match level:
         case "4+":
-            print("Level {} has a middle percentage of 98%".format(level))
+            message = "Level {} has a middle percentage of 98%".format(level)
         case "4":
-            print("Level {} has a middle percentage of 91%".format(level))
+            message = "Level {} has a middle percentage of 91%".format(level)
         case "4-":
-            print("Level {} has a middle percentage of 83%".format(level))
+            message = "Level {} has a middle percentage of 83%".format(level)
         case "3+":
-            print("Level {} has a middle percentage of 78%".format(level))
+            message = "Level {} has a middle percentage of 78%".format(level)
         case "3":
-            print("Level {} has a middle percentage of 75%".format(level))
+            message = "Level {} has a middle percentage of 75%".format(level)
         case "3-":
-            print("Level {} has a middle percentage of 71%".format(level))
+            message = "Level {} has a middle percentage of 71%".format(level)
         case "2+":
-            print("Level {} has a middle percentage of 68%".format(level))
+            message = "Level {} has a middle percentage of 68%".format(level)
         case "2":
-            print("Level {} has a middle percentage of 65%".format(level))
+            message = "Level {} has a middle percentage of 65%".format(level)
         case "2-":
-            print("Level {} has a middle percentage of 61%".format(level))
+            message = "Level {} has a middle percentage of 61%".format(level)
         case "1+":
-            print("Level {} has a middle percentage of 58%".format(level))
+            message = "Level {} has a middle percentage of 58%".format(level)
         case "1":
-            print("Level {} has a middle percentage of 55%".format(level))
+            message = "Level {} has a middle percentage of 55%".format(level)
         case "1-":
-            print("Level {} has a middle percentage of 51%".format(level))
+            message = "Level {} has a middle percentage of 51%".format(level)
         case _:
-            print("Level {} is a -1 and has a middle percentage of 25%".format(level))
+            message = "Level {} is a -1 and has a middle percentage of 25%".format(
+                level
+            )
+    return message
 
 
 # this function gets the users input which is a grade level
@@ -48,7 +51,8 @@ def main():
     print("")
     # call the function to display the percent according to what level the user
     # inputs
-    calc_mark(level_user)
+    percent = calc_mark(level_user)
+    print(percent)
 
 
 if __name__ == "__main__":
